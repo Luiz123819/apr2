@@ -1,0 +1,619 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --cor--Primaria: #1E3A8A;
+    --cor--Secundaria: #374151;
+    --cor--Terciaria: #3B82F6;
+    --cor--Quartenaria: #000000;
+    --cor--Quintaria: #FFFFFF;
+    --cor--Sextaria: #6B7280;
+}
+body{
+    background-color: #fff;
+}
+/* Conatiner Body */
+.container{
+    box-shadow: 4px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor--Quintaria); /* Branco */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/* Cabecalho */
+@keyframes neonBorder0 {
+    0% {
+        border-color: var(--cor--Terciaria); /* Azul Claro */
+        box-shadow: 0 0 5px var(--cor--Terciaria), 0 0 10px var(--cor--Terciaria), 0 0 20px var(--cor--Terciaria), 0 0 40px var(--cor--Terciaria);
+    }
+    50% {
+        border-color: #00FF00; /* Verde Neon */
+        box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 80px #00FF00;
+    }
+    100% {
+        border-color: var(--cor--Terciaria); /* Azul Claro */
+        box-shadow: 0 0 5px var(--cor--Terciaria), 0 0 10px var(--cor--Terciaria), 0 0 20px var(--cor--Terciaria), 0 0 40px var(--cor--Terciaria);
+    }
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 2% 2%;
+    /* border-bottom: 2px solid var(--cor--Terciaria); Azul Claro */
+    margin-top: 30px;
+    animation: neonBorder 2s infinite;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    top: 10px;
+}
+.nav-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-logo i{
+    font-size: 30pt;
+    color: var(--cor--Sextaria); /* Cinza Claro */
+}
+.nav-logo h2{
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: -5px;
+    color: var(--cor--Sextaria); /* Cinza Claro */
+}
+.nav-logo h2 span{
+    color: var(--cor--Terciaria); /* Azul Claro */
+}
+.nav-logo h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+.nav-items{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-list{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-item{
+    font-size: 16pt;
+    font-weight: 600;
+}
+.nav-link{
+    text-decoration: none;
+    text-align: justify;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--cor--Terciaria); /* Azul Claro */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--cor--Terciaria); /* Azul Claro */
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+/* Home Inicio */
+.home_Inicio {
+    min-height: calc(100vh - 80px); /* Define a altura mínima da seção como a altura total da tela menos 80px */
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.home_Inicio h1 {
+    display: flex;
+    color: var(--cor--Quintaria); /* Cinza Claro */
+    font-size: 90px; /* Define o tamanho da fonte */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove a margem */
+    font-family: 'Concert One', cursive; /* Define a família da fonte */
+}
+
+.home_Inicio h1 span {
+    font-weight: 1000; /* Define o peso da fonte */
+    display: table-cell; /* Define o display como célula de tabela */
+    margin: 0; /* Remove a margem */
+    padding: 10px; /* Adiciona preenchimento */
+    animation: neon 3s linear  infinite; /* Aplica a animação */
+    /* animation-iteration-count: 1; Define para executar apenas uma vez */
+}
+
+.home_Inicio h1 span:nth-child(1) {
+    animation-delay: 0.25s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(2) {
+    animation-delay: 0.50s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(3) {
+    animation-delay: 0.75s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(4) {
+    animation-delay: 1s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(5) {
+    animation-delay: 1.25s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(6) {
+    animation-delay: 1.50s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(7) {
+    animation-delay: 1.75s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(8) {
+    animation-delay: 2s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(9) {
+    animation-delay: 2.25s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(10) {
+    animation-delay: 2.50s; /* Define o atraso da animação */
+}
+
+.home_Inicio h1 span:nth-child(11) {
+    animation-delay: 2.75s; /* Define o atraso da animação */
+}
+
+.home_Inicio h3{
+    font-size: 15pt;
+    font-weight: 600;
+    color:var(--cor--Terciaria); /* Cinza Escuro */
+}
+
+
+@keyframes neon {
+    0% {
+        border-color: var(--cor--Terciaria); /* Azul Claro */
+        text-shadow: 0 0 5px var(--cor--Terciaria), 0 0 10px var(--cor--Terciaria), 0 0 20px var(--cor--Terciaria), 0 0 40px var(--cor--Terciaria);
+    }
+    50% {
+        border-color: #00FF00; /* Verde Neon */
+        text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 80px #00FF00;
+    }
+    100% {
+        border-color: var(--cor--Terciaria); /* Azul Claro */
+        text-shadow: 0 0 5px var(--cor--Terciaria), 0 0 10px var(--cor--Terciaria), 0 0 20px var(--cor--Terciaria), 0 0 40px var(--cor--Terciaria);
+    }
+    
+}
+/* Seção Home */
+.home {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_texT {
+    width: 550px;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.home_texT h1 {
+    font-size: 30pt;
+    font-weight: 600;
+    color: var(--cor--Sextaria); /* Cinza Claro */
+}
+
+.home_texT h1 span {
+    color: var(--cor--Terciaria); /* Azul Claro */
+}
+
+.home_texT h2 {
+    font-size: 16pt;
+    font-weight: 500;
+    color: var(--cor--Primaria); /* Azul */
+    margin-top: 20px;
+}
+
+.home_texT p {
+    font-size: 16pt;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.imagens {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.imagens img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Seção História */
+.hitory {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 90px;
+}
+
+.hitory h1 {
+    width: 300px;
+    background-color: var(--cor--Primaria); /* Azul */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30pt;
+    font-weight: 600;
+    color: var(--cor--Quintaria); /* Branco */
+    border-radius: 80px 0px 80px 0px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hitory p {
+    font-size: 16pt;
+    font-weight: 500;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+.hitory .imagens h6{
+    font-size: 14pt;
+    color: var(--cor--Terciaria);
+    font-weight: 600;
+    text-align: center;
+}
+/* Seção Evolução */
+.home_evolução {
+    min-height: 100vh;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    gap: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.home_evolução h1 {
+    font-size: 30pt;
+    font-weight: 600;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor--Primaria); /* Azul */
+    color: var(--cor--Quintaria); /* Branco */
+    border-radius: 80px 0px 80px 0px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card {
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+    perspective: 1000px;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotatey(180deg);
+  }
+  
+  .flip-card .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-back,
+  .flip-card-front {
+    cursor: pointer;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card-front {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor--Quintaria);
+    
+  
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+    text-align: center;
+    gap: 30px;
+    padding: 10px 20px;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  .flip-card-front h4 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #0c0c0c;
+  }
+  .img_Card_Evolution{
+    height: 150px;
+    width: 100%;
+  }
+  .flip-card-back p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .flip-card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(1, 225, 255);
+   
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+    text-align: center;
+    gap: 30px;
+    padding: 10px 20px;
+  }
+
+
+/* Botão */
+button {
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+    background-color: transparent;
+    border: none;
+    font-size: 13pt;
+    font-weight: 500;
+}
+
+button:hover {
+    color: var(--cor--Terciaria); /* Azul Claro */
+}
+
+.open {
+    overflow: visible;
+}
+
+/* Seção Maiores Fabricantes */
+.home_MaioresFabricantes .title_MaioresFabricantes {
+    margin-left: 33.5%;
+    margin-right: 50%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 360px;
+    height: 70px;
+    background-color: var(--cor--Primaria); /* Azul */
+    border-radius: 80px 0px 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30pt;
+    font-weight: 600;
+    color: var(--cor--Quintaria); /* Branco */
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Tabela de Preços */
+.home_preco {
+    width: 95%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_preco h1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 70px;
+    background-color: var(--cor--Primaria); /* Azul */
+    border-radius: 80px 0px 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30pt;
+    font-weight: 600;
+    color: var(--cor--Quintaria); /* Branco */
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+/* Estilos Gerais para Tabelas */
+table{
+    width: 95%;
+}
+
+thead{
+    background-color: var(--cor--Primaria); /* Azul */
+    font-size: 17pt;
+    color: var(--cor--Quintaria); /* Branco */
+}
+
+/* Seção de Slots */
+.slots_Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slots_Home h1{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 70px;
+    background-color: var(--cor--Primaria); /* Azul */
+    border-radius: 80px 0px 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30pt;
+    font-weight: 600;
+    color: var(--cor--Quintaria); /* Branco */
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tabela_Slots{
+    width: 95%;
+}
+
+#imagens_Table{
+    width: 200px;
+    height: 200px;
+}
+
+/* Seção de Maiores Fabricantes */
+.home_MaioresFabricantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.MaioresFabricantes_ComparacaoTecnica_Content h3{
+    font-size: 18pt;
+    font-weight: 600;
+    margin-bottom: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.maioresFabricantes_Topicos{
+    font-size: 16pt;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.maioresFabricantes_Topicos li span{
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--cor--Primaria); /* Azul */
+}
+
+.maioresFabricantes_Topico_Precos{
+    font-size: 16pt;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.maioresFabricantes_ComparacaoPrecos h3{
+    font-size: 18pt;
+    font-weight: 600;
+    margin-bottom: 35px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.maioresFabricantes_Topico_Precos li span{
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--cor--Primaria); /* Azul */
+}
+
+.tabelas_MaioresFabricantes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Nvidia_Tabela{
+    width: 98.3%;
+    font-size: 14px;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.AMD_Tabela{
+    width: 98.3%;
+    font-size: 14px;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
+
+.home_MaioresFabricantes p{
+    font-size: 16pt;
+    width: 95%;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--cor--Secundaria); /* Cinza Escuro */
+}
